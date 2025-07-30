@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\dashboard\DashboardController;
+use App\Http\Controllers\dashboard\DoctorController;
 use App\Http\Controllers\dashboard\SectionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -46,6 +47,7 @@ Route::group(
         Route::middleware(['auth:admin', 'verified'])->group(function () {
             
             Route::resource('sections', SectionController::class);
+            Route::resource('doctors', DoctorController::class);
 
             
         });

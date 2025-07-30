@@ -18,6 +18,8 @@ class Doctor extends Model
         'price',
         'appointments', // Assuming 'appointments' is a translatable attribute
         'name', // Assuming 'name' is a translatable attribute
+        'section_id',
+        'is_active', // Added is_active field
     ];
 
     public $translatedAttributes = [
@@ -28,5 +30,10 @@ class Doctor extends Model
     public function image()
     {
         return $this->morphOne(Image::class, 'imageable');
+    }
+
+    public function section()
+    {
+        return $this->belongsTo(Section::class);
     }
 }

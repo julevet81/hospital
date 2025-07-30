@@ -6,6 +6,7 @@ return [
      'index'=>'Home',
      'sections'=>'Sections',
      'view_all'=> 'view all',
+     'Doctors'=>'Doctors',
 
 
 ];
